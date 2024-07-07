@@ -9,8 +9,9 @@ const app = new Hono()
         clerkMiddleware(),
         async (c) => {
             const auth = getAuth(c);
-            if (!auth) {
-                throw new HTTPException(401, { res: c.json({error: "Unauthorized"}, 401)});
+            if (!auth?.userId) {
+                throw new HTTPException(401, { 
+                    res: c.json({error: "Unauthorized"}, 401)});
             }
       const data = await db
       .select({
