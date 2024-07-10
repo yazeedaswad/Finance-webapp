@@ -32,7 +32,7 @@ export const Createaccountbutton = () => {
             Name
           </Label>
           
-          <Input id="username" value="Savings, Credit card etc.." className="col-span-3" />
+          <Input id="username" value="Savings, Credit etc.." className="col-span-3" />
         </div>
       </div>
       <SheetFooter>
